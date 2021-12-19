@@ -8,5 +8,12 @@ pipeline {
                 sh "ifconfig"
             }
         }
+        stage('Execute') {
+            steps {
+                echo 'This is the second phase'
+                sh 'df -h'
+                echo 'Get ready to Rock'
+            }
+        }
     }
 }
